@@ -1,0 +1,7 @@
+[Checkpoint_2026-01-07_Hytqi-StudioPro]-"Core, resume from Checkpoint_Hytqi_StudioPro_2026-01-07"
+DIGGA Galaxy Core Agent – Hytqi Studio Pro Session
+Checkpoint_Hytqi_StudioPro_2026-01-07
+
+Current folder: C:\Projects\hytqi_studio_pro
+Goal: Run the project locally, verify frontend deployment, organize project for live release.
+Next step: Run Node/NPM version check and install dependencies.

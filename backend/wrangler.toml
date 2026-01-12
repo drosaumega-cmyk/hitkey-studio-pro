@@ -1,0 +1,53 @@
+# ─────────────────────────────────────────────
+# Cloudflare Wrangler Configuration
+# Local + Node.js-compat version
+# ─────────────────────────────────────────────
+# CORS configuration
+name = "ai-audio-studio-backend"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV Storage for sessions and cache
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "84beeebcb42742caaff2e4d48e77bbf8"
+preview_id = "84beeebcb42742caaff2e4d48e77bbf8"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "d8c6511981cd4e98a79be425d471e0d2"
+preview_id = "d8c6511981cd4e98a79be425d471e0d2"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "hytqi_studio_pro_db"
+database_id = "1a83c0b6-40bb-4dd0-bc9b-82313ea248ea"
+
+# Durable Objects for real-time features
+[[durable_objects.bindings]]
+name = "WEBSOCKET_MANAGER"
+class_name = "WebSocketManager"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+NODE_ENV = "development"
+JWT_SECRET = "your-jwt-secret-here"
+STRIPE_SECRET_KEY = "sk_test_your-stripe-key-here"
+STRIPE_PUBLISHABLE_KEY = "pk_test_your-stripe-key-here"
+STRIPE_WEBHOOK_SECRET = "whsec_your-webhook-secret-here"
+EMAIL_FROM = "noreply@aiudiostudio.pro"
+FRONTEND_URL = "http://localhost:5173/"
+API_URL = "https://api.aiudiostudio.pro"
+
+[build]
+command = "npm run build"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["WebSocketManager"]
+
+
+
+

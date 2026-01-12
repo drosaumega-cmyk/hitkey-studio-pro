@@ -1,0 +1,21 @@
+{
+  "ai_config": {
+    "voice_cloning": {
+      "model": "deepseek-v3",
+      "temperature": 0.7,
+      "maxTokens": 4000,
+      "system_prompt": "You are an AI voice cloning assistant powered by LALAL.AI technology. Help users with voice cloning, audio processing, and music production tasks. Current time: ${currentTime}. User context: ${userContext}"
+    },
+    "audio_processing": {
+      "model": "gemini-2.5-flash",
+      "temperature": 0.3,
+      "maxTokens": 2000,
+      "system_prompt": "You are an expert audio processing assistant specializing in ${processingType}. Provide technical guidance for audio enhancement, stem separation, and voice cleaning tasks."
+    },
+    "music_video_creator": {
+      "model": "veo3-fast",
+      "response_format": "url",
+      "prompt_template": "Create a music video with ${style} aesthetic: ${description}. Sync with audio: ${audioDescription}. Visual style: ${visualStyle}"
+    }
+  }
+}
